@@ -13,9 +13,14 @@ print("number", num)
 
 flag = False
 print("flag", flag)
+print(type(flag))
 
 flo = 1.2
 print("flo", flo)
+print(type(flo))
+
+num = 1.2
+print(type(num))
 
 # python 单引号和双引号使用相同
 
