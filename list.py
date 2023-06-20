@@ -1,4 +1,7 @@
 # Lists all
+from collections import deque
+
+
 arr = [1,2,3,4,5,6]
 for i in arr:
     print(i)
@@ -7,30 +10,101 @@ for i in arr:
 
 print("next")
 
-# python data types : int, float, bool, complex复数
-num = 0
-print("number", num)
+arr[2] = 1
+del arr[3]
+print(arr) # [1, 2, 1, 5, 6]
 
-flag = False
-print("flag", flag)
-print(type(flag))
+length = len(arr)
+print(length)
 
-flo = 1.2
-print("flo", flo)
-print(type(flo))
+arr = arr + [9,99]
+print(arr)
 
-num = 1.2
-print(type(num))
+newArr = [1,2] * 2
+print(newArr)
 
-# python 单引号和双引号使用相同
+if 99 in arr:
+    print("yes")
+else:
+    print("no")
 
-# r可以让转义符失效
-print("r", r"\n")
-print("r", r"\t")
-print("r", r"\'")
-print("n r", "\"")
-print("n r", "\n")
-print("n r", "\t")
+print("length : {}".format(arr.count(1)))
 
-print('hello\nrunoob')      # 使用反斜杠(\)+n转义特殊字符
-print(r'hello\nrunoob')     # 在字符串前面添加一个 r，表示原始字符串，不会发生转义
+print("max : {}".format(max(arr)))
+# reverse 只负责将集合进行倒置，并不负责排序，也没有返回值
+arr.reverse()
+print("reversed : {}".format(arr))
+
+copyArr = arr.copy()
+print(copyArr)
+
+print("==========================")
+tupleArr = 1,2,3
+print(type(tupleArr))
+
+tup1 = ()
+print(type(tup1))
+
+# tuple 起始如果仅有一个元素，那么就是那个元素的类型，而集合恒为集合
+intTup = (1)
+strTup = "hello"
+intList = [1]
+print(type(intTup))
+print(type(strTup))
+print(type(intList))
+intTup = (1,2,3)
+intList = [1,2,3]
+print(type(intTup))
+print(type(intList))
+# 以下表达式会报错，因为元组不可变
+# intTup[0] = 10
+
+list = [1,2,3]
+list.append(4)
+print(list)
+
+list.extend([5,6])
+print(list)
+
+list.insert(0, 0)
+print(list)
+
+# 将list作为stack使用
+stack = []
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack)
+
+stack.pop()
+print(stack)
+
+# 将list作为queue使用
+queue = deque([])
+queue.append(1)
+queue.append(2)
+queue.append(3)
+print(queue)
+
+queue.popleft()
+print(queue)
+
+print("==========================")
+# list other methods
+list = [1,2,3]
+list1 = [4,5,6]
+# 1. zip()
+for i in zip(list, list1):
+    print(i)
+    print(i[0])
+    print(i[1])
+
+# 2. reverse()
+for i in reversed(list):
+    print(i)
+list = [3,2,1]
+# 3. sort() 默认 ASC
+for i in sorted(list):
+    print(i)
+
+
