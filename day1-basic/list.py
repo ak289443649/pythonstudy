@@ -108,3 +108,7 @@ for i in sorted(list):
     print(i)
 
 
+list = [1,2,3,4,5,6]
+list.append(7)
+list.remove(6)
+print(list)

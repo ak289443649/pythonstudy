@@ -82,3 +82,12 @@ str = min(upperStr)
 print(str)
 
 print("================================")
+# 截取
+# 1.功能三个参数分别是：start, end, step
+# 2.且同Java中的截取相同，均为左闭右开区间
+subStr = "test demo python"
+print(subStr[0:3])
+print(subStr[0:5:1])
+print(subStr[0:6:1])
+print(subStr[-1:-7:-1])
+print(subStr[-6::1])

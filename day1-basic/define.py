@@ -19,21 +19,26 @@ def max(num1, num2):
         return num2
     
 print(max(3, 2))
-
+# ** 代表该函数的关键字类型是一个dict - 包含key & value
 def dictDemo(**kwargs):
+    print(type(kwargs))
     for key, value in kwargs.items():
         print(key, value)
 
 dictDemo(name='test', age=18)
-
+print("==================")
+# * 代表该函数的关键字类型是一个tuple - 接收即不可变
 def tupleDemo(*args):
+    print(type(args))
     for item in args:
         print(item)
 
 tupleDemo(1, 2, 3, 4, 5)
-
+print("==================")
+# 给参数赋予默认值的方式是一种兜底方案
 def defaultDemo(args = None):
     if args is None:
+        print("default")
         args = []
     for item in args:
         print(item)
