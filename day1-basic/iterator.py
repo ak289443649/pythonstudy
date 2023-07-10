@@ -1,3 +1,5 @@
+# iterator 迭代器，可以通过python的协议进行创建
+# 类中实现方法__iter__()和__next__()即可
 import sys
 
 

@@ -91,3 +91,21 @@ print(subStr[0:5:1])
 print(subStr[0:6:1])
 print(subStr[-1:-7:-1])
 print(subStr[-6::1])
+
+# 字符串判断是否相等使用==双等号
+# 判断引用是否相同使用is 关键字
+
+# r可以让转义符失效
+# f可以格式化字符串中的占位符{}
+
+set1 = 'test'
+set2 = 'demo'
+
+print(f'this is {set1} {set2} ...')
+# 多种format实现方式
+# 格式化字符串可以使用f的方式（需要python3.6+）
+# format函数、或%s表示占位符，%d表示数字
+
+print('this is %s %s ...' % (set1, set2))
+
+print('this is {} {} ...'.format(set1, set2))

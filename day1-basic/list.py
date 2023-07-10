@@ -112,3 +112,12 @@ list = [1,2,3,4,5,6]
 list.append(7)
 list.remove(6)
 print(list)
+
+print("==========================")
+
+def add_end(L=[]):
+    L.append('END')
+    return L
+
+for i in range(2):
+    print(add_end())
