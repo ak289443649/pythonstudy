@@ -1,5 +1,6 @@
 # Lists all
 from collections import deque
+import copy
 
 
 arr = [1,2,3,4,5,6]
@@ -121,3 +122,20 @@ def add_end(L=[]):
 
 for i in range(2):
     print(add_end())
+
+print("==========================")
+# 切片
+oldList = [1,2,3,4,5,6]
+list1 = oldList[:]
+print(list1)
+print("==========================")
+list3 = copy.copy(list1)
+print(list3)
+print(list1 is list3)
+list4 = list3.copy()
+print(list4)
+print(list1 is list4)
+list5 = copy.deepcopy(list1)
+print(list1 is list5)
+print(list5)
+# 仅结果值会进行引用公用，即不变的数据会被引用，可变的不会被引用
